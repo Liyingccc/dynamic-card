@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态名片</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #cover {
+            width: 300px;
+            cursor: pointer;
+        }
+        #qrcode {
+            width: 300px;
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="cover" src="cover.jpg" alt="封面图" onclick="showQRCode()">
+    <img id="qrcode" src="qrcode.jpg" alt="二维码" onclick="goToLink()">
+    <script>
+        function showQRCode() {
+            document.getElementById('cover').style.display = 'none';
+            document.getElementById('qrcode').style.display = 'block';
+        }
+
+        function goToLink() {
+            window.location.href = 'https://yourlink.com'; // 替换成实际要跳转的网址
+        }
+    </script>
+</body>
+</html>
